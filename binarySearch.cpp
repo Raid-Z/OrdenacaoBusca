@@ -1,7 +1,3 @@
-int binarySearch(int value, int *arr, int len) {
-	bSearch(arr, 0, len, value);
-}
-
 int bSearch(int *array, int start, int end, int value)  {
     if(end >= start){
         int mid = start + (end - start) / 2;
@@ -14,4 +10,8 @@ int bSearch(int *array, int start, int end, int value)  {
         return bSearch(array, mid + 1, end, value);
     }
     return -1;
+}
+
+int binarySearch(int value, int *arr, int len) {
+	bSearch(arr, 0, len, value);
 }
