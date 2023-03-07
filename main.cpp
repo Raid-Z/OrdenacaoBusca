@@ -2,12 +2,6 @@
 #include <cstdlib>
 #include <ctime>
 
-int main()
-{
-    int *arr;
-    randomArray(1000000, arr);
-}
-
 void randomArray(int len, int *arr)
 {
     arr = new int[len];
@@ -16,4 +10,10 @@ void randomArray(int len, int *arr)
     {
         arr[i] = rand() % 100; // generate a random integer between 0 and 99
     }
+}
+
+int main()
+{
+    int *arr;
+    randomArray(1000000, arr);
 }
