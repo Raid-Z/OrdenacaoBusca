@@ -10,7 +10,7 @@ int main()
 
 void randomArray(int len, int *arr)
 {
-    int *arr = new int[len];
+    arr = new int[len];
     srand(time(0));
     for (int i = 0; i < len; i++)
     {
