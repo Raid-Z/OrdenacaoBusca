@@ -9,9 +9,9 @@ int bSearch(int *array, int start, int end, int value)  {
             return mid;
 
         if(array[mid] > value)
-            return binarySearch(array, start, mid - 1, value);
+            return bSearch(array, start, mid - 1, value);
 
-        return binarySearch(array, mid + 1, end, value);
+        return bSearch(array, mid + 1, end, value);
     }
     return -1;
 }
