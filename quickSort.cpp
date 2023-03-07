@@ -1,7 +1,3 @@
-void quickSort(int *arr, int len) {
-	qSort(arr, 0, len);
-}
-
 void qSort(int *arr , int start ,int end ) {
 	if (end <= 1) {
 		return;
@@ -17,4 +13,8 @@ void qSort(int *arr , int start ,int end ) {
 	arr[i], arr[end-1] = arr[end-1], arr[i];
 	qSort(arr, start, i);
 	qSort(arr, i+1, end);
+}
+
+void quickSort(int *arr, int len) {
+	qSort(arr, 0, len);
 }

@@ -1,3 +1,10 @@
+void swap(int &a, int &b)
+{
+	int aux = b;
+	b = a;
+	a = aux;
+}
+
 void bubbleSort(int *arr, int len)
 {
 	bool swapped = false;
@@ -11,11 +18,4 @@ void bubbleSort(int *arr, int len)
 			}
 		}
 	}
-}
-
-void swap(int &a, int &b)
-{
-	int aux = b;
-	b = a;
-	a = aux;
 }

@@ -1,8 +1,3 @@
-void mergeSort(int *arr, int length) {
-	mSort(arr, 0, length);
-	// mudança
-}
-
 void Merge(int *A, int l, int c, int r){
     int sizel = c - l + 1;  //tamanho da primeira parte
     int sizer = r - c;      //tamanho da segunda parte
@@ -49,4 +44,8 @@ void mSort(int *arr, int start, int end){
         mSort(arr, center+1, end);
         Merge(arr, start, center, end);
     }
+}
+
+void mergeSort(int *arr, int length) {
+	mSort(arr, 0, length);
 }
