@@ -1,21 +1,16 @@
-void swap(int &a, int &b)
-{
-	int aux = b;
-	b = a;
-	a = aux;
-}
-
 void bubbleSort(int *arr, int len)
 {
-	bool swapped = false;
-	while (swapped)
-	{
-		for (int i = 1; i < len; i++)
-		{
-			if (arr[i - 1] > arr[i])
-			{
-				swap(arr[i - 1], arr[i]);
-			}
-		}
-	}
+	int s=0;
+    int temp = 0;
+    do{
+        s=0;
+        for(int i=0;i<len;i++){
+            if(arr[i]>arr[i+1]){
+                temp = arr[i];
+                arr[i]=arr[i+1];
+                arr[i+1]=temp;
+                s++;
+            }
+        }
+    }while(s>0);
 }
