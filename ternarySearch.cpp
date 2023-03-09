@@ -1,6 +1,5 @@
-int tSearch(int value, int *arr, int start, int end)
+int tSearch(int *arr, int start, int end)
 {
-	// TODO: Implement me https://www.geeksforgeeks.org/ternary-search/
 	if (end >= start)
 	{
 		int mid1 = start + (end - start) / 3;
@@ -17,7 +16,7 @@ int tSearch(int value, int *arr, int start, int end)
 	return -1;
 }
 
-int ternarySearch(int value, int *arr, int len)
+int ternarySearch(int *arr, int len)
 {
-	return tSearch(value, arr, 0, len);
+	return tSearch(arr, 0, len);
 }
