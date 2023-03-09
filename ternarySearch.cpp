@@ -1,4 +1,4 @@
-int tSearch(int *arr, int start, int end)
+int tSearch(int value, int *arr, int start, int end)
 {
 	if (end >= start)
 	{
@@ -16,7 +16,7 @@ int tSearch(int *arr, int start, int end)
 	return -1;
 }
 
-int ternarySearch(int *arr, int len)
+int ternarySearch(int value, int *arr, int len)
 {
-	return tSearch(arr, 0, len);
+	return tSearch(value, arr, 0, len);
 }
