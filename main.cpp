@@ -207,7 +207,7 @@ double* randomArray(int len)
     for (int i = 0; i < len; i++){
         arrC[i] = 20 + rand()%1999980; 
     }
-    cout << len << endl;
+    cout << "Tamanho da array: "<<len << endl;
     cout << "===========================================" << endl;
     return arrC;
 }
@@ -254,21 +254,21 @@ int main()
             case 1:
             for (k = 0; k <= 4; k++){
                 cronometro = bubbleSort(arr[k], tamanhos[k]);
-                cout << calculaTempo(cronometro) << endl;
+                cout << "O array "<< k + 1 << " levou: "<<calculaTempo(cronometro) << " segundos" << endl;
             }
                 break;
                 
             case 2:
             for (k = 0; k <= 4; k++){
                 cronometro = quickSort(arr[k], tamanhos[k]);
-                cout << calculaTempo(cronometro) << endl;
+                cout << "O array "<< k + 1 << " levou: "<<calculaTempo(cronometro) << " segundos" << endl;
             }
                 break;
                 
             case 3:
             for (k = 0; k <= 4; k++){
                 cronometro = mergeSort(arr[k], tamanhos[k]);
-                cout << calculaTempo(cronometro) << endl;
+                cout << "O array "<< k + 1 << " levou: "<<calculaTempo(cronometro) << " segundos" << endl;
             }
                 break;
                 
@@ -276,14 +276,15 @@ int main()
             numeroProcurado = meDeUmNumero();
             for (k = 0; k <= 4; k++){
                 cronometro = binarySearch(numeroProcurado, arr[k], tamanhos[k]);
-                cout << calculaTempo(cronometro) << endl;
-            }
+                cout << "O array "<< k + 1 << " levou: "<<calculaTempo(cronometro) << " segundos" << endl;
+            }   
+                break;
             
             case 5:
             numeroProcurado = meDeUmNumero();
             for (k = 0; k <= 4; k++){
                 cronometro = ternarySearch(numeroProcurado, arr[k], tamanhos[k]);
-                cout << calculaTempo(cronometro) << endl;
+                cout << "O array "<< k + 1 << " levou: "<<calculaTempo(cronometro) << " segundos" << endl;
             }
                 break;
                 
