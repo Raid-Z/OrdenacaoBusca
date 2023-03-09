@@ -223,6 +223,13 @@ double *randomArray(int len)
     cout << "Tamanho da array: " << len << endl;
     cout << "===========================================" << endl;
     return arrC;
+    int *arr = new int[len];
+    srand(time(0));
+    for (int i = 0; i < len; i++)
+    {
+        arr[i] = rand() % 5; // generate a random integer between 0 and 99
+    }
+    return arr;
 }
 
 double meDeUmNumero()
@@ -329,5 +336,4 @@ int main()
         delete[] arr[i];
     }
 
-    return 0;
 }

@@ -1,25 +1,38 @@
-void quickSort(int *arr, int len)
+void swap(int &a, int &b)
 {
-	qSort(arr, 0, len);
+	int temp = a;
+	a = b;
+	b = temp;
 }
 
-void qSort(int *arr, int start, int end)
+int Partition(int arr[], int l, int r)
 {
-	if (end <= 1)
-	{
-		return;
-	}
-	int pivot = arr[end - 1];
-	int i = 0;
-	for (int j = 0; j < end - 1; j++)
+	int pivot = arr[r];
+	int i = l;
+	for (int j = l; j < r; j++)
 	{
 		if (arr[j] <= pivot)
 		{
-			arr[i], arr[j] = arr[j], arr[i];
+			if (i != j)
+			{
+				swap(arr[i],arr[j]);
+			}
 			i++;
 		}
 	}
-	arr[i], arr[end - 1] = arr[end - 1], arr[i];
-	qSort(arr, start, i);
-	qSort(arr, i + 1, end);
+	swap(arr[i],arr[r]);
+	return i;
+}
+void qSort(int arr[], int l, int r)
+{
+	if (l < r)
+	{
+		int p = Partition(arr, l, r);
+		qSort(arr, l, p-1);
+		qSort(arr, p + 1, r);
+	}
+}
+void quickSort(int *arr, int len)
+{
+	qSort(arr, 0, len-1);
 }
