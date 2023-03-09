@@ -1,44 +1,26 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include "search.hpp"
+#include "sort.hpp"
+
 using namespace std;
 
 int* randomArray(int len)
 {
-    int *arrC = new int[len];
-    for (int i=0; i <= len;i++){
-        arrC[i] = 0;
-    }
+    int *arr = new int[len];
     srand(time(0));
-    for (int i = 0; i < len; i++){
-        arrC[i] = 20 + rand()%1999980; // generate a random integer between 20 and 2000000
+    for (int i = 0; i < len; i++)
+    {
+        arr[i] = rand() % 5; // generate a random integer between 0 and 99
     }
-    return arrC;
+    return arr;
 }
 
 int main()
 {
-    int **arr;
-    arr = new int * [4];
-    int tamanhoVet = 0;
-    int numeroProcurado = 0;
-    int k;
-    for (k = 0; k <= 4; k++){
-        srand(time(0));
-        tamanhoVet = 10000 + rand()%990000;
-        arr[k] = new int [tamanhoVet];
-        arr[k] = randomArray(tamanhoVet);
-    }
-
-    do{
-        cout << "Procure um numero no array:" << endl;
-        cin >> numeroProcurado;
-    } while(!(numeroProcurado > 20 && numeroProcurado < 2000000));
-
-
-    for (int i=0; i <= 4;i++){
-        delete[] arr[i];
-    }
-
+    int *arr = randomArray(10);
+    quickSort(arr, 10);
+    cout << ternarySearch(3,arr,10) << endl;
     return 0;
 }
