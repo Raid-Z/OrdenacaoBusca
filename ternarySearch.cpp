@@ -4,7 +4,7 @@ int tSearch(int value, int *arr, int start, int end)
 	if (end >= start)
 	{
 		int mid1 = start + (end - start) / 3;
-		int mid2 = start - (end - start) / 3;
+		int mid2 = end - (end - start) / 3;
 		if (arr[mid1] == value)
 			return mid1;
 
