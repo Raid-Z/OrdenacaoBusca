@@ -1,6 +1,9 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include "sort.hpp"
+#include "search.hpp"
+
 using namespace std;
 
 int* randomArray(int len)
