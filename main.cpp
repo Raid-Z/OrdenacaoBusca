@@ -32,7 +32,6 @@ double ternarySearch(int value, double *arr, int len)
 	auto end = steady_clock::now();
     duration<double, std::micro> time = end - start;
     double tempo = time.count();
-    cout << tempo << endl;
     return tempo;
 }
 
@@ -59,7 +58,6 @@ double binarySearch(double value, double *arr, int len)
     auto end = steady_clock::now();
     duration<double, std::micro> time = end - start;
     double tempo = time.count();
-    cout << tempo << endl;
     return tempo;
 }
 
@@ -97,7 +95,6 @@ double quickSort(double *arr, int len)
     auto end = steady_clock::now();
     duration<double, std::micro> time = end - start;
     double tempo = time.count();
-    cout << tempo << endl;
     return tempo;
 }
 
@@ -164,7 +161,6 @@ double mergeSort(double *arr, int length) {
     auto end = steady_clock::now();
     duration<double, std::micro> time = end - start;
     double tempo = time.count();
-    cout << tempo << endl;
     return tempo;
 	// mudança
 }
@@ -191,7 +187,6 @@ double bubbleSort(double *arr, int len)
     auto end = steady_clock::now();
     duration<double, std::micro> time = end - start;
     double tempo = time.count();
-    cout << tempo << endl;
     return tempo;
 }
 
